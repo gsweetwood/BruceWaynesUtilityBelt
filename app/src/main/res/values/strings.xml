@@ -4,7 +4,7 @@
     <string name="buttonText_tipCalc">Tip Calculator</string>
     <string name="layout_title_tipCalc">Handy Tip Calculator</string>
     <string name="tipCalc_instuctions">Enter the service total here&#8230;</string>
-    <string name="tipCalc_totalHint">dinner total</string>
+    <string name="tipCalc_totalHint">meal total</string>
     <string name="radButton0">0&#x0025;</string>
     <string name="radButton15">15&#x0025;</string>
     <string name="radButton20">20&#x0025;</string>
@@ -16,5 +16,7 @@
     <string name="tipCalc_tipTitle">Your tip is&#8230;</string>
     <string name="tipCalc_notZero">0</string>
     <string name="tipCalc_notEmpty">Must enter an amount</string>
+    <string name="weather_title">Your local weather&#8230;</string>
+    <string name="button_WeatherAct">Weather</string>
 
 </resources>
