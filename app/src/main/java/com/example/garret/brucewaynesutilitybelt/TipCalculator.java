@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -83,9 +84,9 @@ public class TipCalculator extends AppCompatActivity {
         }
         //Set the tip and total views to the new calculated values
         TextView tipTotal = findViewById((R.id.textView_tipTotal));
-        tipTotal.setText(String.format(Locale.getDefault(), "%.2f", tip));
+        tipTotal.setText(String.format(Locale.getDefault(), "$%.2f", tip));
         TextView finalTotal =  findViewById(R.id.textview_total);
-        finalTotal.setText(String.format(Locale.getDefault(), "%.2f", total));
+        finalTotal.setText(String.format(Locale.getDefault(), "$%.2f", total));
 
     }
 

@@ -1,6 +1,7 @@
 package com.example.garret.brucewaynesutilitybelt;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import org.json.JSONObject;
 
@@ -14,12 +15,13 @@ public class DownloadTask extends AsyncTask<String, Void, String>{
 
 
        @Override
-    protected String doInBackground(String... strings) {
+    protected String doInBackground(String... urls) {
+           Log.d("test", "beginning of doInBackground in DOWNLOAD TASK");
            String result = "";
            URL url;
            HttpURLConnection urlConnection =  null;
            try {
-               url = new URL(strings[0]);
+               url = new URL(urls[0]);
 
                urlConnection = (HttpURLConnection) url.openConnection();
 
@@ -42,18 +44,17 @@ public class DownloadTask extends AsyncTask<String, Void, String>{
            } catch (Exception e) {
                e.printStackTrace();
            }
-
            return null;
+
     }
 
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
-
         try {
             JSONObject jsonObject = new JSONObject(result);
 
-            JSONObject weatherData = new JSONObject((jsonObject.getString("main")));
+            JSONObject weatherData = new JSONObject(jsonObject.getString("main"));
 
             double temperature = Double.parseDouble(weatherData.getString("temp"));
 
@@ -62,8 +63,9 @@ public class DownloadTask extends AsyncTask<String, Void, String>{
             String locationName = jsonObject.getString("name");
 
             Weather.placeView.setText(locationName);
-            Weather.tempView.setText(String.valueOf(temperatureInteger));
+            Weather.tempView.setText(String.valueOf(temperatureInteger) + " F");
         } catch (Exception e){
+            Log.d("test", "FAILED TRY IN onPostExecute, in catch now");
             e.printStackTrace();
         }
     }
