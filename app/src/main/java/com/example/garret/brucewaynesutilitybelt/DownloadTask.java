@@ -51,6 +51,7 @@ public class DownloadTask extends AsyncTask<String, Void, String>{
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
+        //get the relevant data from the JSONObject
         try {
             JSONObject jsonObject = new JSONObject(result);
 
@@ -58,12 +59,12 @@ public class DownloadTask extends AsyncTask<String, Void, String>{
 
             double temperature = Double.parseDouble(weatherData.getString("temp"));
 
-            int temperatureInteger = (int) (temperature * 1.8-459.67);
+            int temperatureInteger = (int) (temperature);
 
             String locationName = jsonObject.getString("name");
 
             Weather.placeView.setText(locationName);
-            Weather.tempView.setText(String.valueOf(temperatureInteger) + " F");
+            Weather.tempView.setText(String.valueOf(temperatureInteger) + "\u00B0F");
         } catch (Exception e){
             Log.d("test", "FAILED TRY IN onPostExecute, in catch now");
             e.printStackTrace();

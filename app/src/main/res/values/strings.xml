@@ -11,12 +11,17 @@
     <string name="radButton50">50&#x0025;</string>
     <string name="tipCalc_tipChoice">Choose your tip percentage&#8230;</string>
     <string name="tipCalc_totalTitle">Your total is&#8230;</string>
-    <string name="tipCalc_total">0</string>
-    <string name="tipCalc_tip">0</string>
+    <string name="tipCalc_total">$0.00</string>
+    <string name="tipCalc_tip">$0.00</string>
     <string name="tipCalc_tipTitle">Your tip is&#8230;</string>
     <string name="tipCalc_notZero">0</string>
     <string name="tipCalc_notEmpty">Must enter an amount</string>
     <string name="weather_title">Your local weather&#8230;</string>
     <string name="button_WeatherAct">Weather</string>
+    <string name="weather_degreeF">&#x2103;F</string>
+    <string name="weather_RightNowText">Right now it is:</string>
+    <string name="weather_TodayText">Today</string>
+    <string name="weather_TomorrowText">Tomorrow</string>
+    <string name="weather_LOHI">Lo/Hi</string>
 
 </resources>
