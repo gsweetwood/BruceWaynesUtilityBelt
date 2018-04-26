@@ -33,13 +33,13 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonTipCalc" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonToUnitConvert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="72dp"
-        android:text="Coming soon..."
+        android:text="@string/unitConverter_Titletext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weatherButton" />
@@ -54,5 +54,5 @@
         android:text="Coming soon..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonToUnitConvert" />
 </android.support.constraint.ConstraintLayout>

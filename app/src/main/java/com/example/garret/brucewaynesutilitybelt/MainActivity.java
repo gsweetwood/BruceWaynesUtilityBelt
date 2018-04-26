@@ -50,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button toUnitConverterButton = findViewById(R.id.buttonToUnitConvert);
+        toUnitConverterButton.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, UnitCoverter.class);
+                startActivity(intent);
+            }
+        });
+
         Log.d("TEST", "this if from MAIN");
     }
 
