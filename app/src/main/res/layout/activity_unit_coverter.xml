@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup3"
+        android:id="@+id/unitSelection"
         android:layout_width="362dp"
         android:layout_height="52dp"
         android:layout_marginEnd="8dp"
@@ -82,9 +82,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="75dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup3"
+        app:layout_constraintTop_toBottomOf="@+id/unitSelection"
         tools:hint="Enter a value..." />
 
     <TextView
@@ -98,21 +98,33 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="136dp"
-        android:layout_height="72dp"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/inputValue"
         app:layout_constraintEnd_toStartOf="@+id/resultValue"
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toEndOf="@+id/inputValue"
-        app:srcCompat="@drawable/arrow_outline_yellow_right"
-        tools:layout_editor_absoluteY="182dp" />
+        app:layout_constraintTop_toTopOf="@+id/inputValue"
+        app:srcCompat="@drawable/arrow_outline_yellow_right" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerIn"
         android:layout_width="123dp"
         android:layout_height="82dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="310dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputValue" />
+
+    <Spinner
+        android:id="@+id/spinnerOut"
+        android:layout_width="138dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinnerIn" />
 
 </android.support.constraint.ConstraintLayout>
