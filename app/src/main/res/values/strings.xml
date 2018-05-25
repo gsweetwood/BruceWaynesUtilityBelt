@@ -28,6 +28,7 @@
     <string name="radButtonLength">LENGTH</string>
     <string name="radButtonVolume">VOLUME</string>
     <string name="radButtonTemp">TEMPERATURE</string>
+    <string name="unitConvertDefault">0.00</string>
     <string-array name="metric_length">
         <item>cm</item>
         <item>m</item>
@@ -37,6 +38,29 @@
         <item>in</item>
         <item>ft</item>
         <item>miles</item>
+    </string-array>
+    <string-array name="imp_mass">
+        <item>oz (mass)</item>
+        <item>lb</item>
+        <item>tons</item>
+    </string-array>
+    <string-array name="metric_mass">
+        <item>mg</item>
+        <item>g</item>
+        <item>Kg</item>
+    </string-array>
+    <string-array name="imp_volume">
+        <item>oz (liquid)</item>
+        <item>teaspoon</item>
+        <item>tablespoon</item>
+        <item>cups</item>
+        <item>pints</item>
+        <item>quarts</item>
+        <item>gallons</item>
+    </string-array>
+    <string-array name="metric_volume">
+        <item>mL</item>
+        <item>L</item>
     </string-array>
 
 </resources>
