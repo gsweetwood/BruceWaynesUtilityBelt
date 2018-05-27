@@ -7,19 +7,6 @@
     tools:context=".Weather">
 
     <TextView
-        android:id="@+id/weatherTodayLOHI2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/weatherTomorrowText"
-        app:layout_constraintStart_toStartOf="@+id/weatherTomorrowText"
-        app:layout_constraintTop_toBottomOf="@+id/weatherTomorrowText"
-        tools:text="@string/weather_LOHI" />
-
-    <TextView
         android:id="@+id/weather_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,67 +54,23 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:text="@string/weather_RightNowText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/locationView"
         tools:text="@string/weather_RightNowText" />
 
     <TextView
-        android:id="@+id/weatherTodayText"
+        android:id="@+id/todayDescriptionLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/weatherTomorrowText"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/temperatureView"
-        tools:text="@string/weather_TodayText" />
-
-    <TextView
-        android:id="@+id/weatherTomorrowText"
-        android:layout_width="69dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:text="TextView"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/weatherTodayText"
-        tools:text="@string/weather_TomorrowText" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureView" />
 
-    <TextView
-        android:id="@+id/weatherTodayLOHI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/weatherTodayText"
-        app:layout_constraintStart_toStartOf="@+id/weatherTodayText"
-        app:layout_constraintTop_toBottomOf="@+id/weatherTodayText"
-        tools:text="@string/weather_LOHI" />
-
-    <TextView
-        android:id="@+id/todayHILO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="64dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/weatherTodayLOHI"
-        app:layout_constraintStart_toStartOf="@+id/weatherTodayLOHI"
-        app:layout_constraintTop_toBottomOf="@+id/weatherTodayLOHI" />
-
-    <TextView
-        android:id="@+id/tomorrowHILO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="64dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/weatherTodayLOHI2"
-        app:layout_constraintStart_toStartOf="@+id/weatherTodayLOHI2"
-        app:layout_constraintTop_toBottomOf="@+id/weatherTodayLOHI2" />
 </android.support.constraint.ConstraintLayout>

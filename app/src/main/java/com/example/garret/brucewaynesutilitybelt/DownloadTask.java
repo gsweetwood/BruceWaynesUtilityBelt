@@ -3,6 +3,7 @@ package com.example.garret.brucewaynesutilitybelt;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.InputStream;
@@ -51,6 +52,8 @@ public class DownloadTask extends AsyncTask<String, Void, String>{
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
+
+
         //get the relevant data from the JSONObject
         try {
             JSONObject jsonObject = new JSONObject(result);
@@ -65,6 +68,15 @@ public class DownloadTask extends AsyncTask<String, Void, String>{
 
             Weather.placeView.setText(locationName);
             Weather.tempView.setText(String.valueOf(temperatureInteger) + "\u00B0F");
+
+            //Get and display current weather descriptionjj
+            JSONArray weatherDescriptionArray = new JSONArray(jsonObject.getString("weather"));
+            JSONObject descriptionData = weatherDescriptionArray.getJSONObject(0);
+            String weatherDescription = descriptionData.getString("description");
+
+
+
+            Weather.todayDescritpion.setText(weatherDescription.toUpperCase());
         } catch (Exception e){
             Log.d("test", "FAILED TRY IN onPostExecute, in catch now");
             e.printStackTrace();
